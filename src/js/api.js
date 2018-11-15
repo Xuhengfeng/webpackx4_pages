@@ -28,7 +28,6 @@ export const get = (url,body = null) => {
         url = new URL(url);
         Object.keys(body).forEach(key => url.searchParams.append(key, body[key]));
     }
-
     const promise = fetch(url,{
         method : HttpMethod.GET,
         headers: getHeaders(),

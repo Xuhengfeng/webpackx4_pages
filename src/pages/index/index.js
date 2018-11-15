@@ -1,4 +1,5 @@
-// import "./index.scss";
+import "./index.scss";
+
 // let tabUI = require("../../js/tab");
 // console.log('121');
 // tabUI.init();
@@ -7,15 +8,23 @@
 // 	animate: true
 // });
 
+import * as all from "../../js/url";
+
+all.default.QIANDUODUO().then(res=>{
+	console.log(res);
+}).catch(error=>{
+	console.log(error);
+})
 
 
+all.default.CHECK_PROJECT().then(res=>{
+	console.log(res);
+}).catch(error=>{
+	console.log(error);
+})
 
-import {get, post} from '../../js/api.js';
-import * as obj from '../../js/url.js';
-
-
-get(obj.default.MONEYNFIVE).then(res=>{
-	console.log(res)
-}).catch(error=>{console.log(error)})
-
-
+all.default.MY_INVESTMENT().then(res=>{
+	console.log(res);
+}).catch(error=>{
+	console.log(error);
+})
