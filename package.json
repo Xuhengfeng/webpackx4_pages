@@ -43,7 +43,7 @@
 		"url-loader": "^1.0.1",
 		"webpack": "^4.25.1",
 		"webpack-bundle-analyzer": "^2.13.0",
-		"webpack-dev-server": "^3.1.4",
+		"webpack-dev-server": "^3.1.10",
 		"webpack-merge": "^4.1.2"
 	},
 	"dependencies": {
