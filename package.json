@@ -9,7 +9,7 @@
 		"build": "cross-env NODE_ENV=production webpack --config build/webpack.prod.conf.js",
 		"server": "live-server ./ --port=8888"
 	},
-	"author": "ypzhou",
+	"author": "xuhengfeng",
 	"license": "ISC",
 	"devDependencies": {
 		"autoprefixer": "^8.5.0",
