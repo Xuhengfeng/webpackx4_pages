@@ -18,7 +18,26 @@ const webpackConfigDev = {
 		overlay: true, // 浏览器页面上显示错误
 		open: true, // 开启浏览器
 		// stats: "errors-only", //stats: "errors-only"表示只打印错误：
-		hot: true // 开启热更新
+		hot: true, // 开启热更新
+		proxy: {
+			'/api': {
+//				target: 'http://39.108.36.189:8001/',//小龙
+//				target: 'http://39.108.36.189:8001/', //阿里云服务器
+				target: 'http://39.108.37.60:8008/',
+				changeOrigin: true,
+				pathRewrite: {
+					'^/api': '/'
+				}
+			},
+			'/apib': {
+				target: 'https://gitee.com/', //新闻
+				changeOrigin: true,
+				pathRewrite: {
+					'^/apib': '/'
+				}
+			}
+			
+		},
 	},
 	plugins: [
 		//热更新
