@@ -11,12 +11,12 @@ const htmlWebpackPlugin = require("html-webpack-plugin");
 const copyWebpackPlugin = require("copy-webpack-plugin");
 const rules = require("./webpack.rules.conf.js");
 // 获取html-webpack-plugin参数的方法
-var getHtmlConfig = function (name, chunks) {
+var getHtmlConfig = function (name, chunks, title) {
 	return {
 		template: `./src/pages/${name}/index.html`,
 		filename: `${name}.html`,
 		// favicon: './favicon.ico',
-		// title: title,
+		title: title,
 		inject: true,
 		hash: true, //开启hash  ?[hash]
 		chunks: chunks,
@@ -33,6 +33,7 @@ module.exports = {
 		// 多入口文件
 		index: './src/pages/index/index.js',
 		login: './src/pages/login/index.js',
+		aboutus: './src/pages/aboutus/index.js'
 	},
 	module: {
 		rules: [...rules]
@@ -78,19 +79,25 @@ module.exports = {
 	// },
 }
 //配置页面
-const htmlArray = [{
-		_html: 'index',
-		title: '首页',
-		chunks: [ 'index']
+const htmlArray = [
+	{
+		_html: 'aboutus',
+		title: '关于我们',
+		chunks: [ 'aboutus']
 	},
 	{
 		_html: 'login',
 		title: '登录',
 		chunks: ['login']
 	},
+	{
+		_html: 'index',
+		title: '首页',
+		chunks: [ 'index']
+	},
 ];
 
 //自动生成html模板
-htmlArray.forEach((element) => {
-	module.exports.plugins.push(new htmlWebpackPlugin(getHtmlConfig(element._html, element.chunks)));
+htmlArray.forEach(element => {
+	module.exports.plugins.push(new htmlWebpackPlugin(getHtmlConfig(element._html, element.chunks, element.title)));
 })
