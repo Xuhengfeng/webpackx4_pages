@@ -5,13 +5,14 @@ var layer = layui.layer
 // 全局封装axios
 import axios from  "../../node_modules/axios";
 let urlboole = true;
-let base_url = urlboole ? 'http://39.108.37.60:8008/' : 'http://112.74.181.229:8001/';
-axios.defaults.baseURL= base_url;
+// let base_url = urlboole ? 'http://39.108.37.60:8008/' : 'http://112.74.181.229:8001/';
+// axios.defaults.baseURL= base_url;
 axios.interceptors.request.use(
 	config=>{
 		config.headers = {
-			"token": 'testest'
-		}
+			"token": ''
+    }
+    return config; 
 	},
 	error=>{
 		return Promise.reject(err);
@@ -22,7 +23,7 @@ axios.interceptors.response.use(
 		return response;
 	},
 	error=>{
-		return console.log(error);
+		console.log(error);
 	}
 )
 
@@ -52,11 +53,14 @@ export function patch(url,data = {}){
  * @returns {Promise}
  */
 export function fetch(url, params={}){
+
     return new Promise((resolve, reject)=>{
         axios.get(url, {
             params: params
         })
         .then(res => {
+          console.log(url)
+          console.log('response:',res)
             resolve(res);
         })
         .catch(err => {

@@ -1,4 +1,4 @@
-import {patch, fetch} from "./api";
+import {patch, fetch, post} from "./api";
 // export default {
 // 	URL: 'http://39.108.37.60:8008/',//主服务器
 // 	//      http://112.74.181.229:8001/  测试
@@ -92,9 +92,12 @@ import {patch, fetch} from "./api";
 
 
 export const url =  {
+	test             : function(paramobj){return fetch('http://suggest.taobao.com/sug?code=utf-8&q=衣服&callback=cb', paramobj)},//乾多多返回接口
 	QIANDUODUO       : function(paramobj){return fetch('api/', paramobj)},//乾多多返回接口
 	CHECK_PROJECT    : function(paramobj){return fetch('investment/check_project_password', paramobj)},//邀请奖励
 	BROKER_BOMUS     : function(paramobj){return fetch('member/broker_bonus', paramobj)},//开锁密码
-	MY_INVESTMENT    : function(paramobj){return fetch('api/my-investment/', paramobj)},//回款计划   我的投资数据
+	MY_INVESTMENT    : function(paramobj){return fetch('api/my-investment/', paramobj)},//回款计划 
+	MEMBER_TYPE      : function(paramobj){return fetch('api/member/', paramobj)},//交易账单刷选
+	MENBER_INFO      : function(paramobj){return post('member/info/', paramobj)},//获取用户信息
 }
 

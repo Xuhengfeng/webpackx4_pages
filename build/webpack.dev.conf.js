@@ -37,7 +37,6 @@ const webpackConfigDev = {
 					'^/apib': '/'
 				}
 			}
-			
 		},
 	},
 	plugins: [
