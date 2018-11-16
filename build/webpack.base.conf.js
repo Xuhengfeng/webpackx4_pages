@@ -33,7 +33,9 @@ module.exports = {
 		// 多入口文件
 		index: './src/pages/index/index.js',
 		login: './src/pages/login/index.js',
-		aboutus: './src/pages/aboutus/index.js'
+		aboutus: './src/pages/aboutus/index.js',
+		friendlink: './src/pages/more/friendlink/index.js',
+		service: './src/pages/more/service/index.js',
 	},
 	module: {
 		rules: [...rules]
@@ -80,21 +82,11 @@ module.exports = {
 }
 //配置页面
 const htmlArray = [
-	{
-		_html: 'aboutus',
-		title: '关于我们',
-		chunks: [ 'aboutus']
-	},
-	{
-		_html: 'login',
-		title: '登录',
-		chunks: ['login']
-	},
-	{
-		_html: 'index',
-		title: '首页',
-		chunks: [ 'index']
-	},
+	{_html: 'aboutus', title: '关于我们', chunks: [ 'aboutus']},
+	{_html: 'login', title: '登录', chunks: ['login']},
+	{_html: 'index', title: '首页', chunks: [ 'index']},
+	{_html: 'more/service', title: '服务', chunks: [ 'service']},
+	{_html: 'more/friendlink', title: '友情赞助', chunks: [ 'friendlink']},
 ];
 
 //自动生成html模板
