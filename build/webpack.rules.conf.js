@@ -17,7 +17,7 @@ const rules = [{
 			fallback: "style-loader",
 			use: ["css-loader", "sass-loader", "postcss-loader"],
 			// css中的基础路径
-			publicPath: "../"
+			publicPath: "/"
 
 		})
 	},

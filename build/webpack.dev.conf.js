@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require("webpack");
 const merge = require("webpack-merge");
 const webpackConfigBase = require('./webpack.base.conf');
+const extractTextPlugin = require("extract-text-webpack-plugin");
 const webpackConfigDev = {
 	mode: 'development', // 通过 mode 声明开发环境
 	output: {
@@ -16,7 +17,7 @@ const webpackConfigDev = {
 		host: "127.0.0.1",
 		port: "8089",
 		overlay: true, // 浏览器页面上显示错误
-		open: true, // 开启浏览器
+		open: false, // 开启浏览器
 		// stats: "errors-only", //stats: "errors-only"表示只打印错误：
 		hot: true, // 开启热更新
 		proxy: {
@@ -42,8 +43,11 @@ const webpackConfigDev = {
 	plugins: [
 		//热更新
 		new webpack.HotModuleReplacementPlugin(),
+		new extractTextPlugin({
+			filename: '[name].[hash:8].min.css',
+		}),
 	],
-	// devtool: "source-map",  // 开启调试模式
+	devtool: "source-map",  // 开启调试模式
 	module: {
 		rules: []
 	},

@@ -91,9 +91,9 @@ import {get} from "./api";
 // }
 
 
-export default {
-	QIANDUODUO       : function(paramobj){return get('api/', paramobj)},//乾多多返回接口
-	CHECK_PROJECT    : function(paramobj){return get('investment/check_project_password', paramobj)},//邀请奖励
-	BROKER_BOMUS     : function(paramobj){return get('member/broker_bonus', paramobj)},//开锁密码
-	MY_INVESTMENT    : function(paramobj){return get('api/my-investment/', paramobj)},//回款计划   我的投资数据
-}
+// export default {
+// 	QIANDUODUO       : function(paramobj){return get('api/', paramobj)},//乾多多返回接口
+// 	CHECK_PROJECT    : function(paramobj){return get('investment/check_project_password', paramobj)},//邀请奖励
+// 	BROKER_BOMUS     : function(paramobj){return get('member/broker_bonus', paramobj)},//开锁密码
+// 	MY_INVESTMENT    : function(paramobj){return get('api/my-investment/', paramobj)},//回款计划   我的投资数据
+// }
