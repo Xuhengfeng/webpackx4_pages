@@ -9,7 +9,7 @@ const webpackConfigDev = {
 		path: path.resolve(__dirname, '../dist'),
 		// 打包多出口文件
 		// 生成 a.bundle.[hash].js  b.bundle.[hash].js
-		filename: './js/[name].bundle.js'
+		filename: './js/[name].bundle.js',
 	},
 	devServer: {
 		contentBase: path.join(__dirname, "../src"),
@@ -20,6 +20,9 @@ const webpackConfigDev = {
 		open: false, // 开启浏览器
 		// stats: "errors-only", //stats: "errors-only"表示只打印错误：
 		hot: true, // 开启热更新
+		headers: {
+            'Access-Control-Allow-Origin': '*'
+        },
 		proxy: {
 			'/api': {
 //				target: 'http://39.108.36.189:8001/',//小龙
@@ -46,7 +49,7 @@ const webpackConfigDev = {
 			filename: '[name].[hash:8].min.css',
 		}),
 	],
-	devtool: "source-map",  // 开启调试模式
+	// devtool: "source-map",  // 开启调试模式
 	module: {
 		rules: []
 	},
