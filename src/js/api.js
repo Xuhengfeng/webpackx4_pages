@@ -37,8 +37,8 @@ axios.interceptors.response.use(
 export function patch(url,data = {}){
     return new Promise((resolve,reject) => {
       axios.patch(url,data)
-           .then(response => {
-             resolve(response);
+           .then(res => {
+             resolve(res);
            },err => {
              reject(err)
            })
@@ -59,8 +59,6 @@ export function fetch(url, params={}){
             params: params
         })
         .then(res => {
-          console.log(url)
-          console.log('response:',res)
             resolve(res);
         })
         .catch(err => {
@@ -79,8 +77,8 @@ export function fetch(url, params={}){
 export function post(url,data = {}){
     return new Promise((resolve,reject) => {
       axios.post(url,data)
-           .then(response => {
-             resolve(response.data);
+           .then(res => {
+             resolve(res);
            },err => {
              reject(err)
            })
@@ -97,8 +95,8 @@ export function post(url,data = {}){
 export function put(url,data = {}){
     return new Promise((resolve,reject) => {
       axios.put(url,data)
-           .then(response => {
-             resolve(response.data);
+           .then(res => {
+             resolve(res);
            },err => {
              reject(err)
            })

@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require("webpack");
 const glob = require("glob");
-// 分离css
 
 //消除冗余的css
 const purifyCssWebpack = require("purifycss-webpack");
@@ -9,6 +8,13 @@ const purifyCssWebpack = require("purifycss-webpack");
 const htmlWebpackPlugin = require("html-webpack-plugin");
 //静态资源输出
 const copyWebpackPlugin = require("copy-webpack-plugin");
+
+//多核打包
+const HappyPack = require("happypack");
+const os = require('os');
+const happyThreadPool = HappyPack.ThreadPool({ size: os.cpus().length });
+
+//loader规则
 const rules = require("./webpack.rules.conf.js");
 // 获取html-webpack-plugin参数的方法
 var getHtmlConfig = function (name, chunks, title) {
@@ -62,6 +68,19 @@ module.exports = {
 		new purifyCssWebpack({
 			paths: glob.sync(path.join(__dirname, "../src/pages/*/*.html"))
 		}),
+		new HappyPack({
+				//用id来标识 happypack处理那里类文件
+			id: 'happyBabel',
+			//如何处理  用法和loader 的配置一样
+			loaders: [{
+				loader: 'babel-loader?cacheDirectory=true',
+			}],
+			//共享进程池
+			threadPool: happyThreadPool,
+			//允许 HappyPack 输出日志
+			verbose: true,
+		})
+
 
 	],
 	// webpack4里面移除了commonChunksPulgin插件，放在了config.optimization里面,提取js， vendor名字可改

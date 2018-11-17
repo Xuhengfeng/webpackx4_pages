@@ -23,11 +23,12 @@ const rules = [{
 	},
 	{
 		test: /\.js$/,
-		use: ["babel-loader"],
+		use: ["happypack/loader?id=happyBabel"],
 		// 不检查node_modules下的js文件
-		// exclude: "/node_modules/"
+		exclude: "/node_modules/"
 	}, {
 		test: /\.(png|jpg|gif)$/,
+		// exclude: "src/assets/layui/",
 		use: [{
 			// 需要下载file-loader和url-loader
 			loader: "url-loader",
