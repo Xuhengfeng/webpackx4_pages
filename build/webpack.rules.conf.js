@@ -23,7 +23,9 @@ const rules = [{
 	},
 	{
 		test: /\.js$/,
-		use: ["happypack/loader?id=happyBabel"],
+		// use: ["happypack/loader?id=happyBabel"],
+		//把对.js 的文件处理交给id为happyBabel 的HappyPack 的实例执行
+		loader: 'happypack/loader?id=happyBabel',
 		// 不检查node_modules下的js文件
 		exclude: "/node_modules/"
 	}, {
