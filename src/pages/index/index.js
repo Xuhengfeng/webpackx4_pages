@@ -4,6 +4,7 @@ import {url} from '../../js/url.js'
 import NProgress from '../../../node_modules/nprogress';
 import '../../../node_modules/nprogress/nprogress.css';
 
+console.log($)
 NProgress.start();
 setTimeout(function() { NProgress.done(); $('.fade').removeClass('out'); }, 1000);
 
