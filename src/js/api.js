@@ -23,7 +23,53 @@ axios.interceptors.response.use(
 		return response;
 	},
 	error=>{
-		console.log(error);
+		if (err && err.response) {
+      switch (err.response.status) {
+          case 400:
+              layer.msg('错误请求');
+              break;
+          case 401:
+              layer.msg('未授权，请重新登录');
+              break;
+          case 403:
+              layer.msg('拒绝访问');
+              break;
+          case 404:
+              layer.msg('请求错误,未找到该资源');
+              break;
+          case 405:
+              layer.msg('请求方法未允许');
+              break;
+          case 408:
+              layer.msg('请求超时');
+              break;
+          case 500:
+              layer.msg('服务器端出错');
+              break;
+          case 501:
+              layer.msg('网络未实现');
+              break;
+          case 502:
+              layer.msg('网络错误');
+              break;
+          case 503:
+              layer.msg({
+                  message: '服务不可用',
+                  position: 'bottom'
+              });
+              break;
+              layer.msg('网络超时');
+              break;
+          case 505:
+              layer.msg('http版本不支持该请求');
+              break;
+          default:
+              layer.msg(`连接错误${err.response.status}`);
+      }
+    } else {
+        layer.msg("连接到服务器失败");
+    }
+    return Promise.resolve(err.response)
 	}
 )
 
@@ -114,16 +160,16 @@ export function put(url,data = {}){
 
 
 
-// import ToastComponent from '@/components/toast'
+// import layer.msgComponent from '@/components/layer.msg'
 
-// const Toast = {}
-// // 注册Toast
-// Toast.install = function (Vue) {
+// const layer.msg = {}
+// // 注册layer.msg
+// layer.msg.install = function (Vue) {
 //     // 生成一个Vue的子类
 //     // 同时这个子类也就是组件
-//     const ToastConstructor = Vue.extend(ToastComponent)
+//     const layer.msgConstructor = Vue.extend(layer.msgComponent)
 //     // 生成一个该子类的实例
-//     const instance = new ToastConstructor({
+//     const instance = new layer.msgConstructor({
 //         el: document.createElement('div')
 //     })
 //     // 将这个实例挂载在我创建的div上
@@ -131,7 +177,7 @@ export function put(url,data = {}){
 //     document.body.appendChild(instance.$mount().$el)
 //     // 通过Vue的原型注册一个方法
 //     // 让所有实例共享这个方法
-//     Vue.prototype.$toast = (config) => {
+//     Vue.prototype.$layer.msg = (config) => {
 //         console.log(config instanceof String)
 //         if (typeof (config) === 'string' || typeof (config) === 'number') {
 //             instance.message = config
@@ -161,4 +207,4 @@ export function put(url,data = {}){
 //     }
 // }
 
-// export default Toast
+// export default layer.msg
