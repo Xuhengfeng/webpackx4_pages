@@ -29,7 +29,7 @@ var getHtmlConfig = function (name, chunks, title) {
 		minify: process.env.NODE_ENV === "development" ? false : {
 			removeComments: true, //移除HTML中的注释
 			collapseWhitespace: true, //折叠空白区域 也就是压缩代码
-			removeAttributeQuotes: true, //去除属性引用
+			removeAttributeQuotes: true, //去除属性引号
 		},
 	};
 };

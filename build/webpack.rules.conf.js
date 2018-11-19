@@ -64,6 +64,6 @@ const rules = [{
 			// css中的基础路径
 			publicPath: "../"
 		})
-	},
+	}
 ];
 module.exports = rules;
