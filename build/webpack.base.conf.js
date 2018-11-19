@@ -69,7 +69,7 @@ module.exports = {
 			paths: glob.sync(path.join(__dirname, "../src/pages/*/*.html"))
 		}),
 		new HappyPack({
-				//用id来标识 happypack处理那里类文件
+				//用id来标识happypack处理那里类文件
 			id: 'happyBabel',
 			//如何处理  用法和loader 的配置一样
 			loaders: [{

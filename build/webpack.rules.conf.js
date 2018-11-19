@@ -9,35 +9,30 @@ const rules = [{
 		/*use: extractTextPlugin.extract({
 			fallback: "style-loader",
 			use: ["css-loader", "sass-loader"],
-			// css中的基础路径
-			publicPath: "../"
+			publicPath: "../" 
 		})*/
 		// 区别开发环境和生成环境
 		use: process.env.NODE_ENV === "development" ? ["style-loader", "css-loader", "sass-loader", "postcss-loader"] : extractTextPlugin.extract({
 			fallback: "style-loader",
 			use: ["css-loader", "sass-loader", "postcss-loader"],
-			// css中的基础路径
-			publicPath: "/"
+			publicPath: "../"		//css中的基础路径  注意这里会影响到打包后css背景图片的路径
 
 		})
 	},
 	{
 		test: /\.js$/,
-		// use: ["happypack/loader?id=happyBabel"],
-		//把对.js 的文件处理交给id为happyBabel 的HappyPack 的实例执行
+		//use: ["happypack/loader?id=happyBabel"],
+		//把对.js 的文件处理交给id为happyBabel 的HappyPack的实例执行
 		loader: 'happypack/loader?id=happyBabel',
-		// 不检查node_modules下的js文件
+		//不检查node_modules下的js文件
 		exclude: "/node_modules/"
 	}, {
 		test: /\.(png|jpg|gif)$/,
-		// exclude: "src/assets/layui/",
 		use: [{
-			// 需要下载file-loader和url-loader
-			loader: "url-loader",
+			loader: "url-loader",//需要下载file-loader和url-loader
 			options: {
 				limit: 5 * 1024, //小于这个时将会已base64位图片打包处理
-				// 图片文件输出的文件夹
-				outputPath: "images"
+				outputPath: "images"	//图片文件输出的文件夹
 			}
 		}]
 	},
@@ -50,8 +45,7 @@ const rules = [{
 	},
 	{
 		test: /\.html$/,
-		// html中的img标签
-		use: ["html-withimg-loader"]
+		use: ["html-withimg-loader"]//html中的img标签
 	}, {
 		test: /\.less$/,
 		// 三个loader的顺序不能变
@@ -61,8 +55,7 @@ const rules = [{
 		use: process.env.NODE_ENV === "development" ? ["style-loader", "css-loader", "less-loader"] : extractTextPlugin.extract({
 			fallback: "style-loader",
 			use: ["css-loader", "less-loader"],
-			// css中的基础路径
-			publicPath: "../"
+			publicPath: "../"// css中的基础路径
 		})
 	}
 ];

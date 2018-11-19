@@ -50,7 +50,7 @@ const webpackConfigProd = {
 				}
 			}
 		}),
-		new BundleAnalyzerPlugin(),
+		// new BundleAnalyzerPlugin(),
 	],
 	module: {
 		rules: []
