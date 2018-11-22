@@ -22,7 +22,7 @@ axios.interceptors.response.use(
 	response=>{
 		return response;
 	},
-	error=>{
+	err=>{
 		if (err && err.response) {
       switch (err.response.status) {
           case 400:

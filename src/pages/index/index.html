@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title><%= htmlWebpackPlugin.options.title %></title>
+	<title>首页</title>
 	<link rel="stylesheet" href="./assets/css/animate.css">
 	<link rel="stylesheet" href="./assets/layui/css/layui.css">
 	<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
@@ -55,20 +55,17 @@
 		</div>
 	</div>
 -->
-	<div class="main">
-		<img src="../../images/zdg.png" alt="" alt="我是图片">
-		<div class="bg">
-			我是背景图
+
+	<div id="app">
+		<div class="main">
+			<img src="../../images/zdg.png" alt="" alt="我是图片">
+			<div class="bg">
+				我是背景图
+			</div>
 		</div>
-	</div>
-	<!-- <div id="test">
+		
 		<el-button type="text" @click="open">点击打开 Message Box</el-button>
-	</div> -->
-
-
-	
-	<div id="test">
-		<el-button type="text" @click="open">点击打开 Message Box</el-button>
+		<xhf_alert ref="xhf_alert"></xhf_alert>
 	</div> 
 
 
@@ -77,11 +74,13 @@
 	<a href="./login.html">登录</a>
 	<a href="./more/friendlink.html">友情连接</a>
 	<a href="./more/service.html">服务</a>
-
-	<script src="./assets/js/jquery.min.js"></script>
-	<script src="./assets/js/snow.js"></script>
-	<script src="./assets/layui/layui.all.js"></script>
+	
 	<script src="./assets/js/vue.min.js"></script>
+	<script src="./assets/js/jquery.min.js"></script>
 	<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+	<script src="./assets/layui/layui.all.js"></script>
+	<script src="./assets/js/snow.js"></script>
+	<!-- 公共组件 -->
+	<script src="./assets/js/com_component.js"></script>
 </body>
 </html>
