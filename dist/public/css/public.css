@@ -1,0 +1,13 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Microsoft YaHei", "微软雅黑", " PingFang-SC-Medium", "PingFang-SC-Bold""Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #1b1d2c;
+  font-size: 14px;
+  height: 100%;
+}
