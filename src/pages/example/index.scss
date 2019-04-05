@@ -84,18 +84,6 @@ a:hover {
 	margin-left: 55px;
 }
 
-.buy-now {
-	position: absolute;
-	right: 0;
-	top: 0;
-	width: 100px;
-	height: 36px;
-	line-height: 36px;
-	text-align: center;
-	color: #fff;
-	background-color: #3db1fa;
-}
-
 .center-wrap {
 	position: relative;
 	z-index: 1;
@@ -106,14 +94,15 @@ a:hover {
 
 .section {
 	overflow: hidden;
+
+	h1 {
+		margin-bottom: 20px;
+		line-height: 1.4;
+		font-size: 40px;
+		font-weight: 400;
+	}
 }
 
-.section h1 {
-	margin-bottom: 20px;
-	line-height: 1.4;
-	font-size: 40px;
-	font-weight: 400;
-}
 
 /* 第一屏 */
 .banner {
@@ -123,87 +112,105 @@ a:hover {
 /* 第二屏 */
 .hospital {
 	position: relative;
+
+	.colorBox {
+		height: 400px;
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		transform: translateY(-50%);
+		background: rgba(247, 247, 247, 1);
+	}
+
+	.bgBox {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		opacity: 0.3;
+		/* background: url('../img/example/hospital/bg.png') center 0 no-repeat; */
+	}
+
+	.desc {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transition: all 0.3s ease-in-out;
+		opacity: 0;
+		transform: translate(-250px, -50%);
+	}
+
+	.content {
+		margin-bottom: 30px;
+
+		h3 {
+			font-size: 28px;
+			font-family: MicrosoftYaHei;
+			font-weight: 400;
+			color: rgba(51, 51, 51, 1);
+			margin-bottom: 30px;
+		}
+
+		div {
+			font-size: 20px;
+			font-family: MicrosoftYaHei;
+			font-weight: 400;
+			line-height: 1.5;
+			color: rgba(51, 51, 51, 1);
+			margin-bottom: 30px;
+		}
+
+		span {
+			font-size: 24px;
+			font-family: MicrosoftYaHei;
+			font-weight: 400;
+			color: rgba(36, 115, 213, 1);
+		}
+	}
+
+	ul li {
+		display: inline-block;
+		text-align: center;
+		margin-right: 40px;
+
+		img {
+			width: 65px;
+			height: 65px;
+			transition: all .3s ease-in-out;
+
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+
+		img+div {
+			font-size: 20px;
+			font-family: MicrosoftYaHei;
+			font-weight: 400;
+			color: rgba(102, 102, 102, 1);
+			line-height: 38px;
+		}
+	}
+
+	.mobile {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 680px;
+		height: 587px;
+		right: 0;
+	}
 }
 
-.hospital .colorBox {
-	height: 400px;
-	position: absolute;
-	top: 50%;
-	width: 100%;
-	transform: translateY(-50%);
-	background: rgba(247, 247, 247, 1);
+
+
+// 动画
+.hospital.active .desc {
+	opacity: 1;
+	transform: translate(0, -50%);
 }
 
-.hospital .bgBox {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	opacity: 0.3;
-	/* background: url('../img/example/hospital/bg.png') center 0 no-repeat; */
-}
 
-.hospital .desc {
-	position: absolute;
-	left: 0;
-	top: 50%;
-	transform: translateY(-50%);
-}
 
-.hospital .content {
-	margin-bottom: 30px;
-}
-
-.hospital .content h3 {
-	font-size: 28px;
-	font-family: MicrosoftYaHei;
-	font-weight: 400;
-	color: rgba(51, 51, 51, 1);
-	margin-bottom: 30px;
-}
-
-.hospital .content div {
-	font-size: 20px;
-	font-family: MicrosoftYaHei;
-	font-weight: 400;
-	line-height: 1.5;
-	color: rgba(51, 51, 51, 1);
-	margin-bottom: 30px;
-}
-
-.hospital .content span {
-	font-size: 24px;
-	font-family: MicrosoftYaHei;
-	font-weight: 400;
-	color: rgba(36, 115, 213, 1);
-}
-
-.hospital ul li {
-	display: inline-block;
-	text-align: center;
-	margin-right: 40px;
-}
-
-.hospital ul li img {
-	width: 65px;
-	height: 65px;
-}
-
-.hospital ul li img+div {
-	font-size: 20px;
-	font-family: MicrosoftYaHei;
-	font-weight: 400;
-	color: rgba(102, 102, 102, 1);
-	line-height: 38px;
-}
-
-.hospital .mobile {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	width: 680px;
-	height: 587px;
-	right: 0;
-}
 
 /* 第三屏 */
 .government {

@@ -31,9 +31,8 @@
 	</div>
 
 	<div id="dowebok">
-		<div class="section header fp-auto-height active"></div>
 		<!-- 第一屏 -->
-		<div class="section banner ">
+		<div class="section banner active">
 			<div class="center-wrap"></div>
 		</div>
 
@@ -387,11 +386,6 @@
 				if (!nonull.test(form_details)) {
 					return msg_alert('描述格式错误,仅支持中文与英文与数字'), !1;
 				}
-				console.log(form_name);
-				console.log(form_price);
-				console.log(form_details);
-				console.log(form_moible);
-				console.log(form_serve);
 			});
 			$('.tab_ul_max li').on('click', function () {
 				var $index = $(this).index();
@@ -408,35 +402,32 @@
 			var $mlNav = $('.ml-nav');
 			$('#dowebok').fullpage({
 				verticalCentered: !1,
-				navigation: !0,
+				navigation: true,
 				onLeave: function (index, nextIndex, direction) {
-					if (nextIndex === 1) {
-						return false;
-					}
 					if (index == 2 && direction == 'up') {
 						$mlNav.animate({
 								top: 0
 							},
 							680
-						);
+						)
 					} else if (index == 1 && direction == 'down') {
 						$mlNav.animate({
 								top: 0
 							},
 							400
-						);
+						)
 					} else if (index == 3 && direction == 'up') {
 						$mlNav.animate({
 								top: 0
 							},
 							500
-						);
+						)
 					} else {
 						$mlNav.animate({
 								top: -95
 							},
 							400
-						);
+						)
 					}
 				}
 			});

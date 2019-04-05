@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title><%= JSON.stringify(htmlWebpackPlugin.options.title) %></title>
+	<title><%= JSON.stringify(htmlWebpackPlugin.options.title).replace(/\"/g,'') %></title>
 	<meta name="keywords" content="数合软件" />
 	<meta name="description" content="数合软件" />
 	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
@@ -14,8 +14,6 @@
 	<!-- <link href="<%= JSON.stringify(htmlWebpackPlugin.options) %>" rel="stylesheet" /> -->
 	<% for (var i in htmlWebpackPlugin.options.css) { %>
 	<link href="<%= htmlWebpackPlugin.options.css[i] %>" rel="stylesheet" />
-	<% } %> <% for (var i in htmlWebpackPlugin.options.js) { %>
-	<script src="<%= htmlWebpackPlugin.options.js[i] %>"></script>
 	<% } %>
 
 </head>
@@ -23,7 +21,7 @@
 <body>
 	<div class="ml-nav">
 		<div class="center-wrap clearfix">
-			<h2 class="ml-logo">魅蓝note2</h2>
+			<h2 class="ml-logo"></h2>
 			<p class="ml-link">
 				<a href="./index.html" class="hvr-underline-from-center">首页</a>
 				<a href="./service.html" class="hvr-underline-from-center">服务</a>
@@ -439,11 +437,10 @@
 			</div>
 		</div>
 	</div>
+	<% for (var i in htmlWebpackPlugin.options.js) { %>
+	<script src="<%= htmlWebpackPlugin.options.js[i] %>"></script>
+	<% } %>
 </body>
-<!-- <script src="../../public/js/jquery-1.8.3.min.js"></script>
-<script src="../../public/js/jquery.fullPage.min.js"></script> -->
-<!-- <script src="./public/js/jquery-1.8.3.min.js"></script>
-<script src="./public/js/jquery.fullPage.min.js"></script> -->
 <script>
 	$(function () {
 		function msg_alert(msg) {
@@ -500,7 +497,7 @@
 		var $mlNav = $('.ml-nav')
 		$('#dowebok').fullpage({
 			verticalCentered: !1,
-			navigation: !0,
+			navigation: true,
 			onLeave: function (index, nextIndex, direction) {
 				if (nextIndex === 1) {
 					return false
