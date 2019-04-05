@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const glob = require('glob');
-const cdn = require('./config');
+const config = require('./config');
 
 //消除冗余的css
 const purifyCssWebpack = require('purifycss-webpack');
@@ -38,27 +38,8 @@ var getHtmlConfig = function(name, chunks, title) {
   };
 };
 
-// 配置页面
-const htmlArray = [
-  { _html: 'index', title: '首页', chunks: ['index'] }
-  // { _html: 'login', title: '登录', chunks: ['login'] },
-  // { _html: 'example', title: '案例', chunks: ['example'] },
-  // { _html: 'aboutus', title: '关于我们', chunks: ['aboutus'] },
-  // { _html: 'more/service', title: '服务', chunks: ['service'] },
-  // { _html: 'more/friendlink', title: '友情赞助', chunks: ['friendlink'] }
-];
-
-// 配置多入口
-const entrys = {
-  index: './src/pages/index/index.js'
-  // example: './src/pages/example/index.js',
-  // login: './src/pages/login/index.js',
-  // aboutus: './src/pages/aboutus/index.js',
-  // friendlink: './src/pages/more/friendlink/index.js',
-  // service: './src/pages/more/service/index.js',
-};
 module.exports = {
-  entry: entrys,
+  entry: config.entrys,
   module: {
     rules: [...rules]
   },
@@ -120,11 +101,11 @@ module.exports = {
 };
 
 //自动生成html模板
-htmlArray.forEach(element => {
+config.htmlArray.forEach(element => {
   module.exports.plugins.push(
     new htmlWebpackPlugin({
       ...getHtmlConfig(element._html, element.chunks, element.title),
-      ...cdn
+      ...config.cdn
     })
   );
 });

@@ -36,8 +36,9 @@ const rules = [
       {
         loader: 'url-loader',
         options: {
-          limit: 5 * 1024, //小于这个时将会已base64位图片打包处理
-          outputPath: 'images' //图片文件输出的文件夹
+          limit: 5 * 1024, // 小于这个时将会已base64位图片打包处理
+          name: '[name].[hash:5].[ext]', // 输出的文件名格式
+          outputPath: 'images' // 图片文件输出的文件夹
         }
       }
     ]

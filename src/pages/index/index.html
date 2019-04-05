@@ -12,11 +12,10 @@
 	<meta name="renderer" content="webkit" />
 	<meta http-equiv="Cache-Control" content="no-siteapp" />
 	<!-- <link href="<%= JSON.stringify(htmlWebpackPlugin.options) %>" rel="stylesheet" /> -->
-
-	<% for (var i in htmlWebpackPlugin.options.cdn.css) { %>
-	<link href="<%= htmlWebpackPlugin.options.cdn.css[i] %>" rel="stylesheet" />
-	<% } %> <% for (var i in htmlWebpackPlugin.options.cdn.js) { %>
-	<script src="<%= htmlWebpackPlugin.options.cdn.js[i] %>"></script>
+	<% for (var i in htmlWebpackPlugin.options.css) { %>
+	<link href="<%= htmlWebpackPlugin.options.css[i] %>" rel="stylesheet" />
+	<% } %> <% for (var i in htmlWebpackPlugin.options.js) { %>
+	<script src="<%= htmlWebpackPlugin.options.js[i] %>"></script>
 	<% } %>
 
 </head>
@@ -26,9 +25,9 @@
 		<div class="center-wrap clearfix">
 			<h2 class="ml-logo">魅蓝note2</h2>
 			<p class="ml-link">
-				<a href="javascript:" class="hvr-underline-from-center">首页</a>
+				<a href="./index.html" class="hvr-underline-from-center">首页</a>
 				<a href="./service.html" class="hvr-underline-from-center">服务</a>
-				<a href="javascript:" class="hvr-underline-from-center">案例</a>
+				<a href="./example.html" class="hvr-underline-from-center">案例</a>
 				<a href="javascript:" class="hvr-underline-from-center">关于数合</a>
 			</p>
 		</div>
