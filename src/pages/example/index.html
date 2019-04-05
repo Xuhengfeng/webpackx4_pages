@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title><%= JSON.stringify(htmlWebpackPlugin.options.title) %></title>
+	<title><%= JSON.stringify(htmlWebpackPlugin.options.title).replace(/\"/g, "") %></title>
 	<meta name="keywords" content="数合软件" />
 	<meta name="description" content="数合软件" />
 	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
@@ -14,10 +14,7 @@
 	<!-- <link href="<%= JSON.stringify(htmlWebpackPlugin.options) %>" rel="stylesheet" /> -->
 	<% for (var i in htmlWebpackPlugin.options.css) { %>
 	<link href="<%= htmlWebpackPlugin.options.css[i] %>" rel="stylesheet" />
-	<% } %> <% for (var i in htmlWebpackPlugin.options.js) { %>
-	<script src="<%= htmlWebpackPlugin.options.js[i] %>"></script>
 	<% } %>
-
 </head>
 
 <body>
@@ -25,7 +22,7 @@
 		<div class="center-wrap clearfix">
 			<h2 class="ml-logo"></h2>
 			<p class="ml-link">
-				<a href="./index.html" class="hvr-underline-from-center">首页</a>
+				<a href="index.html" class="hvr-underline-from-center">首页</a>
 				<a href="./service.html" class="hvr-underline-from-center">服务</a>
 				<a href="javascript:" class="hvr-underline-from-center">案例</a>
 				<a href="javascript:" class="hvr-underline-from-center">关于数合</a>
@@ -34,68 +31,237 @@
 	</div>
 
 	<div id="dowebok">
+		<div class="section header fp-auto-height active"></div>
 		<!-- 第一屏 -->
-		<div class="section banner active"></div>
+		<div class="section banner ">
+			<div class="center-wrap"></div>
+		</div>
 
 		<!-- 第二屏 -->
 		<div class="section hospital">
+			<div class="colorBox"></div>
 			<div class="center-wrap">
-				<img src="./public/img/example/hospital/bg.png" alt="" />
-				<img src="./public/img/example/hospital/icon_1.png" alt="" />
-				<img src="./public/img/example/hospital/icon_2.png" alt="" />
-				<img src="./public/img/example/hospital/icon_3.png" alt="" />
-				<img src="./public/img/example/hospital/icon_4.png" alt="" />
-				<img src="./public/img/example/hospital/mobile.png" alt="" />
+				<div class="bgBox"></div>
+				<div class="desc">
+					<div class="content">
+						<h3>医疗电商APP</h3>
+						<div>首家实现线上购物与医疗机构服务</br>相结合的电子商务平台</div>
+						<span>功能</span>
+					</div>
+					<ul>
+						<li>
+							<img src="./public/img/example/hospital/icon_1.png" alt="" />
+							<div>基因科普</div>
+						</li>
+						<li>
+							<img src="./public/img/example/hospital/icon_2.png" alt="" />
+							<div>检测科普</div>
+						</li>
+						<li>
+							<img src="./public/img/example/hospital/icon_3.png" alt="" />
+							<div>科学历程</div>
+						</li>
+						<li>
+							<img src="./public/img/example/hospital/icon_4.png" alt="" />
+							<div>检测流程</div>
+						</li>
+					</ul>
+				</div>
+				<img class="mobile" src="./public/img/example/hospital/mobile.png" alt="" />
 			</div>
 		</div>
 
 		<!-- 第三屏 -->
 		<div class="section government">
 			<div class="center-wrap">
-				<img src="./public/img/example/government/bg.png" alt="" />
-				<img src="./public/img/example/government/icon_1.png" alt="" />
-				<img src="./public/img/example/government/icon_2.png" alt="" />
-				<img src="./public/img/example/government/icon_3.png" alt="" />
-				<img src="./public/img/example/government/icon_4.png" alt="" />
-				<img src="./public/img/example/government/computer.png" alt="" />
+				<img class="computer" src="./public/img/example/government/computer.png" alt="" />
+				<div class="desc">
+					<div class="content">
+						<h3>政务信息系统</h3>
+						<div>
+							系统主要功能包括涉案财物登记、入库、出库、移
+							交、移送、物品处理、打通公检法财、统计汇总、
+							台帐、智能监督、临界预警、审批、系统管理组成
+						</div>
+						<span>功能</span>
+					</div>
+					<table>
+						<tr>
+							<td>
+								<img src="./public/img/example/government/icon_1.png" alt="" />
+								<div>首页</div>
+							</td>
+							<td>
+								<img src="./public/img/example/government/icon_2.png" alt="" />
+								<div>登记</div>
+							</td>
+							<td>
+								<img src="./public/img/example/government/icon_3.png" alt="" />
+								<div>入库</div>
+							</td>
+							<td>
+								<img src="./public/img/example/government/icon_4.png" alt="" />
+								<div>处置</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="./public/img/example/government/icon_5.png" alt="" />
+								<div>审批</div>
+							</td>
+							<td>
+								<img src="./public/img/example/government/icon_6.png" alt="" />
+								<div>查询统计</div>
+							</td>
+							<td>
+								<img src="./public/img/example/government/icon_7.png" alt="" />
+								<div>智能监督</div>
+							</td>
+							<td>
+								<img src="./public/img/example/government/icon_8.png" alt="" />
+								<div>系统管理</div>
+							</td>
+						</tr>
+					</table>
+				</div>
 			</div>
 		</div>
 
 		<!-- 第四屏 -->
 		<div class="section ticket">
+			<div class="colorBox"></div>
 			<div class="center-wrap">
-				<img src="./public/img/example/ticket/bg.png" alt="" />
-				<img src="./public/img/example/ticket/icon_1.png" alt="" />
-				<img src="./public/img/example/ticket/icon_2.png" alt="" />
-				<img src="./public/img/example/ticket/icon_3.png" alt="" />
-				<img src="./public/img/example/ticket/lundu.png" alt="" />
+				<div class="bgBox"></div>
+				<div class="desc">
+					<div class="content">
+						<h3>票务管理系统</h3>
+						<div>
+							海口铁路轮渡互联网售票系统在互联网端售票，并打通微
+							信支付，验票，进站，上船等全部流程，并有完善的管理
+							后台修改和配置经常需要变化的售票规则。同时解放了窗
+							口售票的排队问题，让用户购票更方便，让售票系统更可
+							控，更可靠。
+						</div>
+						<span>功能</span>
+					</div>
+					<ul>
+						<li>
+							<img src="./public/img/example/ticket/icon_1.png" alt="" />
+							<div>购票</div>
+						</li>
+						<li>
+							<img src="./public/img/example/ticket/icon_2.png" alt="" />
+							<div>订单</div>
+						</li>
+						<li>
+							<img src="./public/img/example/ticket/icon_3.png" alt="" />
+							<div>个人中心</div>
+						</li>
+					</ul>
+				</div>
+				<img class="mobile" src="./public/img/example/ticket/lundu.png" alt="" />
 			</div>
 		</div>
+
 
 		<!-- 第五屏 -->
 		<div class="section apartment">
 			<div class="center-wrap">
-				<img src="./public/img/example/apartment/bg" alt="" />
-				<img src="./public/img/example/apartment/icon_1.png" alt="" />
-				<img src="./public/img/example/apartment/icon_2.png" alt="" />
-				<img src="./public/img/example/apartment/icon_3.png" alt="" />
-				<img src="./public/img/example/apartment/icon_4.png" alt="" />
-				<img src="./public/img/example/apartment/icon_5.png" alt="" />
-				<img src="./public/img/example/apartment/icon_6.png" alt="" />
-				<img src="./public/img/example/apartment/icon_7.png" alt="" />
-				<img src="./public/img/example/apartment/icon_8.png" alt="" />
-				<img src="./public/img/example/apartment/computer.png" alt="" />
+				<img class="computer" src="./public/img/example/apartment/computer.png" alt="" />
+				<div class="desc">
+					<div class="content">
+						<h3>公寓管理系统</h3>
+						<div>
+							<h4>交易版块</h4>
+							<p>各类房源筹集功能、供求信息验真功能、供求
+								信息发布功能、租赁交易撮合功能、在线签约
+								备案功能。</p>
+						</div>
+						<div>
+							<h4>服务版块</h4>
+							<p>优惠政策兑现功能、公共服务汇集功能、智慧
+								物业服务功能。</p>
+						</div>
+						<div>
+							<h4>监督版块</h4>
+							<p>数据监测分析功能、租赁全程监管功能。</p>
+						</div>
+						<span>功能</span>
+					</div>
+					<table>
+						<tr>
+							<td>
+								<img src="./public/img/example/apartment/icon_1.png" alt="" />
+								<div>首页</div>
+							</td>
+							<td>
+								<img src="./public/img/example/apartment/icon_2.png" alt="" />
+								<div>房源管理</div>
+							</td>
+							<td>
+								<img src="./public/img/example/apartment/icon_3.png" alt="" />
+								<div>在线业务</div>
+							</td>
+							<td>
+								<img src="./public/img/example/apartment/icon_4.png" alt="" />
+								<div>合同管理</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="./public/img/example/apartment/icon_5.png" alt="" />
+								<div>运营报表</div>
+							</td>
+							<td>
+								<img src="./public/img/example/apartment/icon_6.png" alt="" />
+								<div>信用评分</div>
+							</td>
+							<td>
+								<img src="./public/img/example/apartment/icon_7.png" alt="" />
+								<div>账户管理</div>
+							</td>
+							<td>
+								<img src="./public/img/example/apartment/icon_8.png" alt="" />
+								<div>开发者中心</div>
+							</td>
+						</tr>
+					</table>
+				</div>
 			</div>
 		</div>
-
 		<!-- 第六屏 -->
 		<div class="section infomation">
+			<div class="colorBox"></div>
 			<div class="center-wrap">
-				<img src="./public/img/example/infomation/bg.png" alt="" />
-				<img src="./public/img/example/infomation/icon_1.png" alt="" />
-				<img src="./public/img/example/infomation/icon_2.png" alt="" />
-				<img src="./public/img/example/infomation/icon_3.png" alt="" />
-				<img src="./public/img/example/infomation/mobile.png" alt="" />
+				<div class="bgBox"></div>
+				<div class="desc">
+					<div class="content">
+						<h3>资讯门户网站</h3>
+						<div>
+							打造互联网+交警服务，推出“星级 车主 服务平台”
+							打造“新媒体 政务 的O2O”。<br>
+							通过深圳交警身份认证体系的核验，即可全方位享
+							受 交警24小时在线业务查询、办理、提醒、预约、
+							缴费 等服务。
+						</div>
+						<span>功能</span>
+					</div>
+					<ul>
+						<li>
+							<img src="./public/img/example/infomation/icon_1.png" alt="" />
+							<div>我的主题</div>
+						</li>
+						<li>
+							<img src="./public/img/example/infomation/icon_2.png" alt="" />
+							<div>我的订阅</div>
+						</li>
+						<li>
+							<img src="./public/img/example/infomation/icon_3.png" alt="" />
+							<div>我的收藏</div>
+						</li>
+					</ul>
+				</div>
+				<img class="mobile" src="./public/img/example/infomation/mobile.png" alt="" />
 			</div>
 		</div>
 
@@ -181,100 +347,101 @@
 			</div>
 		</div>
 	</div>
-</body>
-<!-- <script src="../../public/js/jquery-1.8.3.min.js"></script>
-<script src="../../public/js/jquery.fullPage.min.js"></script> -->
-<!-- <script src="./public/js/jquery-1.8.3.min.js"></script>
-<script src="./public/js/jquery.fullPage.min.js"></script> -->
-<script>
-	$(function () {
-		function msg_alert(msg) {
-			$(".msg_alert").text('')
-			$(".msg_alert").text(msg).show();
-			setTimeout(function () {
-				$(".msg_alert").fadeOut();
-			}, 1500)
-		}
-		// 提交表单数据
-		$("#postdata").on('click', function () {
-			var chinese_font = /^[\u0391-\uFFE5A-Za-z]+$/
-			var phonereg = /^1[3,4,5,6,7,8,9][0-9]{1}[0-9]{8}$/
-			var nonull = /^[\u0391-\uFFE5A-Za-z0-9]+$/
-			var _this = $(this),
-				form_name = $("#form_name").val(),
-				form_price = $("#form_price").val(),
-				form_moible = $("#form_moible").val(),
-				form_details = $("#form_details").val(),
-				form_serve = $("#form_serve").val();
-			if (!chinese_font.test(form_name)) {
-				return msg_alert("姓名格式错误，仅支持中文与英文"), !1
+	<% for (var i in htmlWebpackPlugin.options.js) { %>
+	<script src="<%= htmlWebpackPlugin.options.js[i] %>"></script>
+	<% } %>
+	<script>
+		$(function () {
+			function msg_alert(msg) {
+				$('.msg_alert').text('');
+				$('.msg_alert')
+					.text(msg)
+					.show();
+				setTimeout(function () {
+					$('.msg_alert').fadeOut();
+				}, 1500);
 			}
-			if (+form_price === 0) {
-				return msg_alert("请选择预算区间"), !1
-			}
-			if (+form_serve === 0) {
-				return msg_alert("请选择服务类别"), !1
-			}
-			if (!phonereg.test(form_moible)) {
-				return msg_alert("手机格式错误,请重新输入"), !1
-			}
-			if (!nonull.test(form_details)) {
-				return msg_alert("描述格式错误,仅支持中文与英文与数字"), !1
-			}
-			console.log(form_name)
-			console.log(form_price)
-			console.log(form_details)
-			console.log(form_moible)
-			console.log(form_serve)
+			// 提交表单数据
+			$('#postdata').on('click', function () {
+				var chinese_font = /^[\u0391-\uFFE5A-Za-z]+$/;
+				var phonereg = /^1[3,4,5,6,7,8,9][0-9]{1}[0-9]{8}$/;
+				var nonull = /^[\u0391-\uFFE5A-Za-z0-9]+$/;
+				var _this = $(this),
+					form_name = $('#form_name').val(),
+					form_price = $('#form_price').val(),
+					form_moible = $('#form_moible').val(),
+					form_details = $('#form_details').val(),
+					form_serve = $('#form_serve').val();
+				if (!chinese_font.test(form_name)) {
+					return msg_alert('姓名格式错误，仅支持中文与英文'), !1;
+				}
+				if (+form_price === 0) {
+					return msg_alert('请选择预算区间'), !1;
+				}
+				if (+form_serve === 0) {
+					return msg_alert('请选择服务类别'), !1;
+				}
+				if (!phonereg.test(form_moible)) {
+					return msg_alert('手机格式错误,请重新输入'), !1;
+				}
+				if (!nonull.test(form_details)) {
+					return msg_alert('描述格式错误,仅支持中文与英文与数字'), !1;
+				}
+				console.log(form_name);
+				console.log(form_price);
+				console.log(form_details);
+				console.log(form_moible);
+				console.log(form_serve);
+			});
+			$('.tab_ul_max li').on('click', function () {
+				var $index = $(this).index();
+				$('.tab_select_des .des_info')
+					.eq($index)
+					.show()
+					.siblings('.des_info')
+					.hide();
+				$(this)
+					.addClass('active')
+					.siblings()
+					.removeClass('active');
+			});
+			var $mlNav = $('.ml-nav');
+			$('#dowebok').fullpage({
+				verticalCentered: !1,
+				navigation: !0,
+				onLeave: function (index, nextIndex, direction) {
+					if (nextIndex === 1) {
+						return false;
+					}
+					if (index == 2 && direction == 'up') {
+						$mlNav.animate({
+								top: 0
+							},
+							680
+						);
+					} else if (index == 1 && direction == 'down') {
+						$mlNav.animate({
+								top: 0
+							},
+							400
+						);
+					} else if (index == 3 && direction == 'up') {
+						$mlNav.animate({
+								top: 0
+							},
+							500
+						);
+					} else {
+						$mlNav.animate({
+								top: -95
+							},
+							400
+						);
+					}
+				}
+			});
 		});
-		$('.tab_ul_max li').on('click', function () {
-			var $index = $(this).index()
-			$('.tab_select_des .des_info')
-				.eq($index)
-				.show()
-				.siblings('.des_info')
-				.hide()
-			$(this)
-				.addClass('active')
-				.siblings()
-				.removeClass('active')
-		})
-		var $mlNav = $('.ml-nav')
-		$('#dowebok').fullpage({
-			verticalCentered: !1,
-			navigation: !0,
-			onLeave: function (index, nextIndex, direction) {
-				if (nextIndex === 1) {
-					return false
-				}
-				if (index == 2 && direction == 'up') {
-					$mlNav.animate({
-							top: 0
-						},
-						680
-					)
-				} else if (index == 1 && direction == 'down') {
-					$mlNav.animate({
-							top: 0
-						},
-						400
-					)
-				} else if (index == 3 && direction == 'up') {
-					$mlNav.animate({
-							top: 0
-						},
-						500
-					)
-				} else {
-					$mlNav.animate({
-							top: -95
-						},
-						400
-					)
-				}
-			}
-		})
-	})
-</script>
+	</script>
+</body>
 
 </html>

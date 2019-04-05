@@ -68,7 +68,7 @@ a:hover {
 	transform: scale(0.8);
 	margin-top: 15px;
 	font-size: 0;
-	background-image: url("../../public/img/meilannote2_logo.png");
+	background-image: url('~public/img/meilannote2_logo.png');
 	background-repeat: no-repeat;
 }
 
@@ -115,18 +115,412 @@ a:hover {
 	font-weight: 400;
 }
 
-// 第一屏
+/* 第一屏 */
 .banner {
-	background: url("../../public/img/example/banner.png") center 0 no-repeat;
+	background: url('~public/img/example/banner.png') center 0 no-repeat;
 }
 
+/* 第二屏 */
+.hospital {
+	position: relative;
+}
 
+.hospital .colorBox {
+	height: 400px;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	transform: translateY(-50%);
+	background: rgba(247, 247, 247, 1);
+}
 
+.hospital .bgBox {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0.3;
+	/* background: url('../img/example/hospital/bg.png') center 0 no-repeat; */
+}
 
+.hospital .desc {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
 
-// 第七屏
+.hospital .content {
+	margin-bottom: 30px;
+}
+
+.hospital .content h3 {
+	font-size: 28px;
+	font-family: MicrosoftYaHei;
+	font-weight: 400;
+	color: rgba(51, 51, 51, 1);
+	margin-bottom: 30px;
+}
+
+.hospital .content div {
+	font-size: 20px;
+	font-family: MicrosoftYaHei;
+	font-weight: 400;
+	line-height: 1.5;
+	color: rgba(51, 51, 51, 1);
+	margin-bottom: 30px;
+}
+
+.hospital .content span {
+	font-size: 24px;
+	font-family: MicrosoftYaHei;
+	font-weight: 400;
+	color: rgba(36, 115, 213, 1);
+}
+
+.hospital ul li {
+	display: inline-block;
+	text-align: center;
+	margin-right: 40px;
+}
+
+.hospital ul li img {
+	width: 65px;
+	height: 65px;
+}
+
+.hospital ul li img+div {
+	font-size: 20px;
+	font-family: MicrosoftYaHei;
+	font-weight: 400;
+	color: rgba(102, 102, 102, 1);
+	line-height: 38px;
+}
+
+.hospital .mobile {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 680px;
+	height: 587px;
+	right: 0;
+}
+
+/* 第三屏 */
+.government {
+	position: relative;
+	background: url('~public/img/example/government/bg.png') center 0 no-repeat;
+}
+
+.government .computer {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.government .desc {
+	position: absolute;
+	width: 440px;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+}
+
+.government .content {
+	margin-bottom: 30px;
+}
+
+.government .content h3 {
+	font-size: 28px;
+	font-family: MicrosoftYaHei;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 1);
+	margin-bottom: 30px;
+}
+
+.government .content div {
+	font-size: 20px;
+	font-family: MicrosoftYaHei;
+	font-weight: 400;
+	line-height: 1.5;
+	color: rgba(255, 255, 255, 1);
+	margin-bottom: 30px;
+}
+
+.government .content span {
+	font-size: 24px;
+	font-family: MicrosoftYaHei;
+	font-weight: 400;
+	color: rgba(36, 115, 213, 1);
+}
+
+.government td {
+	text-align: center;
+	padding: 0 30px 0 0;
+}
+
+.government td img {
+	width: 49px;
+	height: 49px;
+}
+
+.government td div {
+	font-size: 20px;
+	font-family: MicrosoftYaHei;
+	font-weight: 400;
+	color: rgba(153, 153, 153, 1);
+	margin: 30px 0;
+}
+
+/* 第四屏 */
+.ticket {
+	position: relative;
+}
+
+.ticket .colorBox {
+	height: 460px;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	transform: translateY(-50%);
+	background: rgba(247, 247, 247, 1);
+}
+
+.ticket .bgBox {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0.3;
+	/* background: url('../img/example/ticket/bg.png') center 0 no-repeat; */
+}
+
+.ticket .desc {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.ticket .content {
+	margin-bottom: 30px;
+}
+
+.ticket .content h3 {
+	font-size: 28px;
+	font-family: MicrosoftYaHei;
+	font-weight: 400;
+	color: rgba(51, 51, 51, 1);
+	margin-bottom: 30px;
+}
+
+.ticket .content div {
+	font-size: 20px;
+	width: 500px;
+	font-family: MicrosoftYaHei;
+	font-weight: 400;
+	line-height: 1.5;
+	color: rgba(51, 51, 51, 1);
+	margin-bottom: 30px;
+}
+
+.ticket .content span {
+	font-size: 24px;
+	font-family: MicrosoftYaHei;
+	font-weight: 400;
+	color: rgba(36, 115, 213, 1);
+}
+
+.ticket ul li {
+	display: inline-block;
+	text-align: center;
+	margin-right: 40px;
+}
+
+.ticket ul li img {
+	width: 43px;
+	height: 43px;
+}
+
+.ticket ul li img+div {
+	font-size: 20px;
+	font-family: MicrosoftYaHei;
+	font-weight: 400;
+	color: rgba(102, 102, 102, 1);
+}
+
+.ticket .mobile {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 690px;
+	height: 587px;
+	right: 0;
+}
+
+/* 第五屏 */
+.apartment {
+	position: relative;
+	background: url('~public/img/example/apartment/bg.png') center 0 no-repeat;
+}
+
+.apartment .computer {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.apartment .desc {
+	position: absolute;
+	width: 440px;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+}
+
+.apartment .content {
+	margin-bottom: 30px;
+}
+
+.apartment .content h3 {
+	font-size: 28px;
+	font-family: MicrosoftYaHei;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 1);
+	margin-bottom: 30px;
+}
+
+.apartment .content div {
+	font-size: 20px;
+	font-family: MicrosoftYaHei;
+	font-weight: 400;
+	line-height: 1.5;
+	color: rgba(255, 255, 255, 1);
+}
+
+.apartment .content div p {
+	color: #acabab;
+}
+
+.apartment .content div:nth-of-type(3) {
+	margin-bottom: 30px;
+}
+
+.apartment .content span {
+	font-size: 24px;
+	font-family: MicrosoftYaHei;
+	font-weight: 400;
+	color: rgba(36, 115, 213, 1);
+}
+
+.apartment td {
+	text-align: center;
+	padding: 0 30px 0 0;
+}
+
+.apartment td img {
+	width: 49px;
+	height: 49px;
+}
+
+.apartment td div {
+	font-size: 20px;
+	font-family: MicrosoftYaHei;
+	font-weight: 400;
+	color: rgba(153, 153, 153, 1);
+	margin: 30px 0;
+	white-space: nowrap;
+}
+
+/* 第六屏 */
+.infomation {
+	position: relative;
+}
+
+.infomation .colorBox {
+	height: 440px;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	transform: translateY(-50%);
+	background: rgba(247, 247, 247, 1);
+}
+
+.infomation .bgBox {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0.3;
+	/* background: url('../img/example/infomation/bg.png') center 0 no-repeat; */
+}
+
+.infomation .desc {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.infomation .content {
+	margin-bottom: 30px;
+}
+
+.infomation .content h3 {
+	font-size: 28px;
+	font-family: MicrosoftYaHei;
+	font-weight: 400;
+	color: rgba(51, 51, 51, 1);
+	margin-bottom: 30px;
+}
+
+.infomation .content div {
+	font-size: 20px;
+	width: 443px;
+	font-family: MicrosoftYaHei;
+	font-weight: 400;
+	line-height: 1.5;
+	color: rgba(51, 51, 51, 1);
+	margin-bottom: 30px;
+}
+
+.infomation .content span {
+	font-size: 24px;
+	font-family: MicrosoftYaHei;
+	font-weight: 400;
+	color: rgba(36, 115, 213, 1);
+}
+
+.infomation ul li {
+	display: inline-block;
+	text-align: center;
+	margin-right: 40px;
+}
+
+.infomation ul li img {
+	width: 52px;
+	height: 52px;
+}
+
+.infomation ul li img+div {
+	font-size: 20px;
+	font-family: MicrosoftYaHei;
+	font-weight: 400;
+	color: rgba(102, 102, 102, 1);
+	line-height: 38px;
+}
+
+.infomation .mobile {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 680px;
+	height: 587px;
+	right: 0;
+}
+
+/* 第七屏 */
 .cpu {
-	background: url("../../public/img/bg5.png") center 0 no-repeat;
+	background: url('~public/img/bg5.png') center 0 no-repeat;
 }
 
 .cpu-img {
@@ -140,10 +534,6 @@ a:hover {
 	width: 1200px;
 }
 
-.thin {
-	/* background: url(./img/bg2.jpg) 50% 0 no-repeat; */
-	background: #f7f7f7;
-}
 
 .thin-desc {
 	width: 574px;
@@ -234,18 +624,6 @@ a:hover {
 	color: #fff;
 }
 
-.blue_bg {
-	position: absolute;
-	left: 0;
-	top: 0;
-}
-
-.blue_1 {
-	background: url('../../public/img/hover_1.jpg') no-repeat center;
-	width: 300px;
-	height: 522px;
-	box-shadow: 0px 0px 10px 4px #ccc;
-}
 
 .new_page_title {
 	font-size: 24px;
@@ -341,10 +719,9 @@ p.bg_hover_img_title {
 	opacity: 1;
 }
 
-
 /* 售后 */
 .AfterSale {
-	background: url('../../public/img/AfterSale.png') no-repeat center;
+	// background: url(~public/img/AfterSale.png) no-repeat center;
 	width: 100%;
 	height: 100%;
 	position: relative;

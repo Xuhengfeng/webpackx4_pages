@@ -38,10 +38,21 @@ var getHtmlConfig = function(name, chunks, title) {
   };
 };
 
+function resolve(dir) {
+  return path.join(__dirname, '..', dir);
+}
+
 module.exports = {
   entry: config.entrys,
   module: {
     rules: [...rules]
+  },
+  resolve: {
+    //配置别名，在项目中可缩减引用路径
+    alias: {
+      '@': resolve('src'),
+      public: resolve('src/public')
+    }
   },
   //将外部变量或者模块加载进来
   //项目里配置了自动提取node_modules里用到的模块如jquery，也可以在原模板里面通过第三方cdn引入，又是另一种配置了。在 webpack.base.conf.js利配置externals后webpack就不会去打包配置模块
