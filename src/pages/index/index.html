@@ -499,9 +499,6 @@
 			verticalCentered: !1,
 			navigation: true,
 			onLeave: function (index, nextIndex, direction) {
-				if (nextIndex === 1) {
-					return false
-				}
 				if (index == 2 && direction == 'up') {
 					$mlNav.animate({
 							top: 0

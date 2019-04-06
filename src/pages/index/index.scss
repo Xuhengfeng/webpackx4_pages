@@ -68,7 +68,7 @@ a:hover {
 	transform: scale(0.8);
 	margin-top: 15px;
 	font-size: 0;
-	background-image: url(./img/meilannote2_logo.png);
+	background-image: url(~public/img/meilannote2_logo.png);
 	background-repeat: no-repeat;
 }
 
@@ -139,7 +139,7 @@ a:hover {
 	width: 114px;
 	height: 20px;
 	font-size: 0;
-	// background-image: url(./img/logo.jpg);
+	// background-image: url(~public/img/logo.jpg);
 }
 
 .nav {
@@ -168,7 +168,7 @@ a:hover {
 }
 
 .banner {
-	background: url(./img/bg1-s.png) 50% 0 no-repeat;
+	background: url(~public/img/bg1-s.png) 50% 0 no-repeat;
 }
 
 .banner-desc {
@@ -186,7 +186,7 @@ a:hover {
 }
 
 .thin {
-	/* background: url(./img/bg2.jpg) 50% 0 no-repeat; */
+	/* background: url(~public/img/bg2.jpg) 50% 0 no-repeat; */
 	background: #f7f7f7;
 }
 
@@ -220,7 +220,7 @@ a:hover {
 }
 
 .cnc {
-	/* background: #ff8fa5 url(./img/bg3-s.jpg) center 0 no-repeat; */
+	/* background: #ff8fa5 url(~public/img/bg3-s.jpg) center 0 no-repeat; */
 	background: #fff;
 }
 
@@ -230,7 +230,7 @@ a:hover {
 }
 
 .screen {
-	/* background: url(./img/bg4-s.jpg) center 0 no-repeat; */
+	/* background: url(~public/img/bg4-s.jpg) center 0 no-repeat; */
 }
 
 .screen-desc {
@@ -295,7 +295,7 @@ a:hover {
 }
 
 .cpu {
-	background: url(./img/bg5-s.png) center 0 no-repeat;
+	background: url(~public/img/bg5-s.png) center 0 no-repeat;
 }
 
 .cpu-desc {
@@ -346,7 +346,7 @@ a:hover {
 
 .camera {
 	position: relative;
-	/* background: url(./img/bg7-s.jpg) center 0 no-repeat; */
+	/* background: url(~public/img/bg7-s.jpg) center 0 no-repeat; */
 }
 
 .camera-desc {
@@ -379,7 +379,7 @@ a:hover {
 }
 
 .flyme {
-	background: url(./img/wedoed.png) #f7f7f7 center 0 no-repeat;
+	background: url(~public/img/wedoed.png) #f7f7f7 center 0 no-repeat;
 }
 
 .flyme-desc {
@@ -474,34 +474,34 @@ a:hover {
 
 @media screen and (min-width: 1920px) {
 	.banner {
-		background: url(./img/bg1-s.png) center 0 no-repeat;
+		background: url(~public/img/bg1-s.png) center 0 no-repeat;
 	}
 
 	.thin {
-		/* background: url(./img/bg2.jpg) center 0 no-repeat; */
+		/* background: url(~public/img/bg2.jpg) center 0 no-repeat; */
 		background: #f7f7f7;
 	}
 
 	.cnc {
-		/* background: url(./img/bg3.jpg) center 0 no-repeat; */
+		/* background: url(~public/img/bg3.jpg) center 0 no-repeat; */
 		background: #fff;
 	}
 
 	.screen {
-		/* background: url(./img/bg4.jpg) center 0 no-repeat; */
+		/* background: url(~public/img/bg4.jpg) center 0 no-repeat; */
 		background: #fff;
 	}
 
 	.cpu {
-		background: url(./img/bg5.png) center 0 no-repeat;
+		background: url(~public/img/bg5.png) center 0 no-repeat;
 	}
 
 	.camera {
-		/* background: url(./img/bg7.jpg) center 0 no-repeat; */
+		/* background: url(~public/img/bg7.jpg) center 0 no-repeat; */
 	}
 
 	.flyme {
-		background: url(./img/wedoed.png) #f7f7f7 center 0 no-repeat;
+		background: url(~public/img/wedoed.png) #f7f7f7 center 0 no-repeat;
 	}
 
 	.cnc-desc {
@@ -596,7 +596,7 @@ a:hover {
 
 @media screen and (max-width: 1440px) {
 	.cnc {
-		/* background: url(./img/bg3-xs.jpg) center 0 no-repeat; */
+		/* background: url(~public/img/bg3-xs.jpg) center 0 no-repeat; */
 	}
 }
 
@@ -684,7 +684,7 @@ a:hover {
 }
 
 .blue_1 {
-	background: url('./img/hover_1.jpg') no-repeat center;
+	background: url('~public/img/hover_1.jpg') no-repeat center;
 	width: 300px;
 	height: 522px;
 	box-shadow: 0px 0px 10px 4px #ccc;
@@ -767,7 +767,7 @@ p.bg_hover_img_title {
 }
 
 .bg_hover_img_1 {
-	background: url('./img/ed_img_1.png') no-repeat center;
+	background: url('~public/img/ed_img_1.png') no-repeat center;
 	width: 253px;
 	height: 336px;
 }
@@ -791,61 +791,61 @@ p.bg_hover_img_title {
 }
 
 .bg_hover_img_2 {
-	background: url('./img/ed_img_2.png') no-repeat center;
+	background: url('~public/img/ed_img_2.png') no-repeat center;
 	width: 253px;
 	height: 336px;
 }
 
 .bg_hover_img_3 {
-	background: url('./img/ed_img_3.png') no-repeat center;
+	background: url('~public/img/ed_img_3.png') no-repeat center;
 	width: 253px;
 	height: 336px;
 }
 
 .bg_hover_img_4 {
-	background: url('./img/ed_img_4.png') no-repeat center;
+	background: url('~public/img/ed_img_4.png') no-repeat center;
 	width: 253px;
 	height: 336px;
 }
 
 .bg_hover_img_5 {
-	background: url('./img/ed_img_5.png') no-repeat center;
+	background: url('~public/img/ed_img_5.png') no-repeat center;
 	width: 253px;
 	height: 336px;
 }
 
 .bg_hover_img_6 {
-	background: url('./img/ed_img_6.png') no-repeat center;
+	background: url('~public/img/ed_img_6.png') no-repeat center;
 	width: 253px;
 	height: 336px;
 }
 
 .bg_hover_img_7 {
-	background: url('./img/ed_img_7.png') no-repeat center;
+	background: url('~public/img/ed_img_7.png') no-repeat center;
 	width: 253px;
 	height: 336px;
 }
 
 .bg_hover_img_8 {
-	background: url('./img/ed_img_8.png') no-repeat center;
+	background: url('~public/img/ed_img_8.png') no-repeat center;
 	width: 253px;
 	height: 336px;
 }
 
 .bg_hover_img_9 {
-	background: url('./img/ed_img_9.png') no-repeat center;
+	background: url('~public/img/ed_img_9.png') no-repeat center;
 	width: 253px;
 	height: 336px;
 }
 
 .bg_hover_img_10 {
-	background: url('./img/ed_img_10.png') no-repeat center;
+	background: url('~public/img/ed_img_10.png') no-repeat center;
 	width: 253px;
 	height: 336px;
 }
 
 .icon_bg {
-	background: url('./img/ed_img_1_icon.png') no-repeat center;
+	background: url('~public/img/ed_img_1_icon.png') no-repeat center;
 	width: 80px;
 	height: 80px;
 
@@ -853,63 +853,63 @@ p.bg_hover_img_title {
 }
 
 .icon_bg_2 {
-	background: url('./img/ed_img_2_icon.png') no-repeat center;
+	background: url('~public/img/ed_img_2_icon.png') no-repeat center;
 	width: 80px;
 	height: 80px;
 	margin: 105px auto 30px;
 }
 
 .icon_bg_3 {
-	background: url('./img/ed_img_3_icon.png') no-repeat center;
+	background: url('~public/img/ed_img_3_icon.png') no-repeat center;
 	width: 80px;
 	height: 80px;
 	margin: 105px auto 30px;
 }
 
 .icon_bg_4 {
-	background: url('./img/ed_img_4_icon.png') no-repeat center;
+	background: url('~public/img/ed_img_4_icon.png') no-repeat center;
 	width: 80px;
 	height: 80px;
 	margin: 105px auto 30px;
 }
 
 .icon_bg_5 {
-	background: url('./img/ed_img_5_icon.png') no-repeat center;
+	background: url('~public/img/ed_img_5_icon.png') no-repeat center;
 	width: 80px;
 	height: 80px;
 	margin: 105px auto 30px;
 }
 
 .icon_bg_6 {
-	background: url('./img/ed_img_6_icon.png') no-repeat center;
+	background: url('~public/img/ed_img_6_icon.png') no-repeat center;
 	width: 80px;
 	height: 80px;
 	margin: 105px auto 30px;
 }
 
 .icon_bg_7 {
-	background: url('./img/ed_img_7_icon.png') no-repeat center;
+	background: url('~public/img/ed_img_7_icon.png') no-repeat center;
 	width: 80px;
 	height: 80px;
 	margin: 105px auto 30px;
 }
 
 .icon_bg_8 {
-	background: url('./img/ed_img_8_icon.png') no-repeat center;
+	background: url('~public/img/ed_img_8_icon.png') no-repeat center;
 	width: 80px;
 	height: 80px;
 	margin: 105px auto 30px;
 }
 
 .icon_bg_9 {
-	background: url('./img/ed_img_9_icon.png') no-repeat center;
+	background: url('~public/img/ed_img_9_icon.png') no-repeat center;
 	width: 80px;
 	height: 80px;
 	margin: 105px auto 30px;
 }
 
 .icon_bg_10 {
-	background: url('./img/ed_img_10_icon.png') no-repeat center;
+	background: url('~public/img/ed_img_10_icon.png') no-repeat center;
 	width: 80px;
 	height: 80px;
 	margin: 105px auto 30px;
@@ -917,7 +917,7 @@ p.bg_hover_img_title {
 
 /* 售后 */
 .AfterSale {
-	background: url('./img/AfterSale.png') no-repeat center;
+	background: url('~public/img/AfterSale.png') no-repeat center;
 	width: 100%;
 	height: 100%;
 	position: relative;
