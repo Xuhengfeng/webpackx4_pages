@@ -9,7 +9,6 @@ const purifyCssWebpack = require('purifycss-webpack');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 //静态资源输出
 const copyWebpackPlugin = require('copy-webpack-plugin');
-
 //多核打包
 const HappyPack = require('happypack');
 const os = require('os');

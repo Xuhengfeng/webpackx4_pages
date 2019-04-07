@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title><%= JSON.stringify(htmlWebpackPlugin.options.title).replace(/\"/g,'') %></title>
+	<meta name="keywords" content="数合软件" />
+	<meta name="description" content="数合软件" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="renderer" content="webkit" />
+	<meta http-equiv="Cache-Control" content="no-siteapp" />
+	<!-- <link href="<%= JSON.stringify(htmlWebpackPlugin.options) %>" rel="stylesheet" /> -->
+	<% for (var i in htmlWebpackPlugin.options.css) { %>
+	<link href="<%= htmlWebpackPlugin.options.css[i] %>" rel="stylesheet" />
+	<% } %>
+</head>
+
+<body>
+	<div class="ml-nav">
+		<div class="center-wrap clearfix">
+			<h2 class="ml-logo"></h2>
+			<p class="ml-link">
+				<a href="index.html" class="hvr-underline-from-center">首页</a>
+				<a href="service.html" class="hvr-underline-from-center">服务</a>
+				<a href="example.html" class="hvr-underline-from-center">案例</a>
+				<a href="about.html" class="hvr-underline-from-center">关于数合</a>
+			</p>
+		</div>
+	</div>
+	<div class="banner_box"></div>
+	<!-- section-1 -->
+	<div class="containerbox">
+		<ul class="ul_box ul_li_fl clears">
+			<li class="borderli">
+				<img src="./public/img/service/icon_3.png" alt="" />
+				<div>高端网站建设</div>
+				<p>
+					全面对企业、客户、市场进行专业的分析和评估
+					策划出适宜企业自身特点的个性化企业网站建设
+					方案，辅以一套特色的网站设计。
+				</p>
+			</li>
+			<li class="borderli">
+				<img src="./public/img/service/icon_1.png" alt="" />
+				<div>APP定制开发</div>
+				<p>
+					丰富的行业app定制经验，提供主流的IOS、安
+					卓软件开发服务与app定制策划，提供并“跨屏
+					整合”多平台优质多应用开发服务。
+				</p>
+			</li>
+			<li class="borderli">
+				<img src="./public/img/service/icon_2.png" alt="" />
+				<div>微信小程序</div>
+				<p>借力微信众多社区流量入口，抢占市场，抓住机 遇。</p>
+			</li>
+			<li class="borderli">
+				<img src="./public/img/service/icon_4.png" alt="" />
+				<div>互联网服务</div>
+				<p>
+					技术+营销+服务,全网营销推广,以技术为导
+					向提供全方位营销型网站+app+小程序技术服 务支持。
+				</p>
+			</li>
+		</ul>
+	</div>
+	<!-- section-2 -->
+	<div class="bg_blue">
+		<div class="containerbox">
+			<h1 class="tc">视觉与技术更紧密的结合</h1>
+			<p class="tc">
+				以原型框架与交互体验为基石，设计引导趋向的产品与项目规划
+			</p>
+			<ul class="ul_li_fl_only clears">
+				<li>
+					<dl>
+						<dt>
+							<div>
+								<img src="./public/img/service/icon_phone.png" alt="" />
+							</div>
+							<div>
+								<div>响应式设计</div>
+								<b>手机、电脑、平板即时切换</b>
+							</div>
+						</dt>
+						<dt>
+							<div>
+								<img src="./public/img/service/icon_like.png" alt="" />
+							</div>
+							<div>
+								<div>APP交互诊断</div>
+								<b>发现现有产品的交互问题所在</b>
+							</div>
+						</dt>
+						<dt>
+							<div>
+								<img src="./public/img/service/icon_pen.png" alt="" />
+							</div>
+							<div>
+								<div>优质设计创意</div>
+								<b>精确至每一像素的细节</b>
+							</div>
+						</dt>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>
+							<div>
+								<img src="./public/img/service/icon_status.png" alt="" />
+							</div>
+							<div>
+								<div>原型框架设计</div>
+								<b>优化用户体验交互细节</b>
+							</div>
+						</dt>
+						<dt>
+							<div>
+								<img src="./public/img/service/icon_ui.png" alt="" />
+							</div>
+							<div>
+								<div>资深UI设计师</div>
+								<b>设计师一对一随时沟通</b>
+							</div>
+						</dt>
+						<dt>
+							<div>
+								<img src="./public/img/service/icon_kefu.png" alt="" />
+							</div>
+							<div>
+								<div>售后服务</div>
+								<b>确定后您仍有机会修改设计</b>
+							</div>
+						</dt>
+					</dl>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- section -3 -->
+	<div class="containerbox  ">
+		<div class="tcbox clears">
+			<ul class="ul_li_fl clears lastul">
+				<li>
+					<div>
+						<img src="./public/img/service/icon_1_min.png" alt="" />
+						<h1>汇聚创新元素</h1>
+						<p>
+							以创新设计为远点，以原型框架与交互体验为原则，遵循企线积累已久的工作思维模式，保持创新连贯性，有节奏的
+							深入用户情感，让产
+						</p>
+					</div>
+				</li>
+				<li>
+					<div>
+						<img src="./public/img/service/icon_2_min.png" alt="" />
+						<h1>提升用户体验</h1>
+						<p>
+							收集个体差异细小的用户惯性，满足用户需求并超越用户需求。建立起可信赖的心里感受，让功能自然属性触碰到用
+							户的痛点，从而提高
+						</p>
+					</div>
+				</li>
+				<li>
+					<div>
+						<img src="./public/img/service/icon_3_min.png" alt="" />
+						<h1>梳理设计框架</h1>
+						<p>
+							深入挖掘并激活初期需求功能点，重新
+							梳理解构需求“分子化”排列，使创新更
+							具实用性，使形式更具想象力。流动的 设计概念让形式不
+						</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+
+</html>
